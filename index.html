@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <script src="./src/app.js" defer></script>
+    <title>Desafio TypeScript</title>
+</head>
+
+<body>
+    <header>
+        <h1> Projeto in TypeScript</h1>
+        <nav class="navbar bg-dark center">
+            <form class="container-fluid  justify-content-center">
+                <input type="button" value="Calculadora" class="btn btn-outline-success ms-4"
+                    onclick="exibirCalculadora()">
+                <input type="button" value="Conversor Temperatura" class="btn btn-outline-success ms-4"
+                    onclick="exibirConversor()">
+                <input type="button" value="Conversor Peso" class="btn btn-outline-success ms-4"
+                    onclick="exibirConverPeso()">
+                <input type="button" value="Cadastro Pessoas" class="btn btn-outline-success ms-4"
+                    onclick="exibirCadastroPessoas()">
+
+            </form>
+        </nav>
+    </header>
+
+    <main class="grid text-center">
+
+        <div id="calculadora" class="none">
+            <div class="text-center  mt-5 ">
+                <input type="text" id="numberCalc01">
+                <label for="numberCalc01">Numero 01</label>
+                <input type="text" id="numberCalc02">
+                <label for="numberCalc02">Numero 02</label>
+            </div>
+            <div class="grid text-center mt-5">
+                <h3>Resultado: <span id="resulCalc"></span></h3>
+            </div>
+            <div class="grid text-center mt-5 ms-5">
+                <button class="btn btn-primary" id="somar" onclick="somar()"> Somar </button>
+                <button class="btn btn-danger" id="subtrair" onclick="subtrair()"> Subtrair </button>
+                <button class="btn btn-success" id="multiplicar" onclick="multiplicar()"> Multiplicar
+                </button>
+                <button class="btn btn-warning" id="dividir" onclick="dividir()"> Dividir </button>
+            </div>
+        </div>
+
+
+
+        <div id="conversor" class="none">
+            <div class="text-center mt-5">
+                <input type="text" id="numberTemp">
+                <label for="numberTemp">Temperatura</label>
+            </div>
+            <div class="grid text-center mt-5 ms-5">
+                <h3>Resultado: <span id="resultTemp"></span></h3>
+            </div>
+            <div class="grid text-center mt-5 ms-5">
+                <input type="button" class="btn btn-danger" value="Converter Celsius" onclick="fahrenheitCelsius()">
+                <input type="button" class="btn btn-warning" onclick="celsiusFahrenheit()" value="Converter Fahrenheit">
+            </div>
+        </div>
+
+        <div id="converPeso" class="none">
+            <div class="text-center mt-5">
+                <input type="text" id="numberPeso">
+                <label for="numberPeso">Peso</label>
+            </div>
+            <div class="grid text-center mt-5 ms-5">
+                <h3>Resultado: <span id="resultPeso"></span></h3>
+            </div>
+            <div class="grid text-center mt-5 ms-5">
+                <input type="button" class="btn btn-primary" value="Kilos / Libras" onclick="kilosLibras()">
+                <input type="button" class="btn btn-success" value="Libras / Kilos" onclick="librasKilos()">
+            </div>
+        </div>
+
+        <div id="cadastroPessoas" class="none container-fluid mt-2">
+            <h3>Digite os dados</h3>
+            <div class="row">
+                <input class="input-group-text col-md-6 offset-md-3 mt-2" type="text" id="nomePessoa"
+                    placeholder="Nome">
+                <input class="input-group-text col-md-6 offset-md-3 mt-2" type="text" id="sobrenomePessoa"
+                    placeholder="Sobrenome">
+                <input class="input-group-text col-md-6 offset-md-3 mt-2" type="email" id="emailPessoa"
+                    placeholder="Email">
+                <input class="input-group-text col-md-6 offset-md-3 mt-2" type="text" id="telefonePessoa"
+                    placeholder="Telefone">
+            </div>
+
+            <div class="grid text-center mt-5 ms-5">
+                <input type="button" class="btn btn-success" value="Cadastrar" onclick="cadastrarPessoa()">
+                <input type="button" class="btn btn-primary" value="Exibir Cadastros" onclick="exibirCadastros()">
+            </div>
+
+            <div class="grid text-center mt-5 ms-5">
+                <div id="tabelaCadastros">
+
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
